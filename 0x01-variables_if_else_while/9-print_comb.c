@@ -16,11 +16,17 @@ int main(void)
 	space = 32;
 	while (digit < 58)
 	{
-		putchar(digit);
-		putchar(comma);
-		putchar(space);
+		if (digit != 57)
+		{
+			putchar(digit);
+			putchar(comma);
+			putchar(space);
+		}
+		else
+		{
+			putchar(digit);
+		}
 		digit++;
 	}
-	putchar('\n');
 	return (0);
 }
