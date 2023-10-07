@@ -20,12 +20,12 @@ int main(void)
 		{
 			putchar(digit);
 			putchar(comma);
-			putchar(space);
 		}
 		else
 		{
 			putchar(digit);
 		}
+		putchar(space);
 		digit++;
 	}
 	return (0);
