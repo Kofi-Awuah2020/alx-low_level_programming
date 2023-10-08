@@ -20,8 +20,8 @@ int main(void)
 		if (digit != 57)
 		{
 			putchar(comma);
+			putchar(space);
 		}
-		putchar(space);
 		digit++;
 	}
 	putchar('\n');
