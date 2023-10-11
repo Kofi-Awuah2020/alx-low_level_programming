@@ -3,11 +3,11 @@
 /**
  * _abs - computes the absolute value of an integer.
  *
- * @int: takes in an integer parameter
+ * @x: parameter used to determine distance from 0.
  *
  * Return: an integer value
  */
-int _abs(int)
+int _abs(int x)
 {
 	int x;
 
