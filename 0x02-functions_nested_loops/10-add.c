@@ -2,6 +2,8 @@
 
 /**
  * add - adds two integers and returns the result.
+ * @x: used in addition
+ * @y: used in addition
  *
  * Return: 0 (Success)
  */
@@ -10,14 +12,5 @@ int add(int x, int y)
 	int result;
 
 	result = x + y;
-	if (result > 9)
-	{
-		_putchar('0' + result / 10);
-		_putchar('0' + result % 10);
-	}
-	else
-	{
-		_putchar('0' + result);
-	}
-	return (0);
+	return (result);
 }
