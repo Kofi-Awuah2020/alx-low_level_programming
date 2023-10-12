@@ -2,8 +2,8 @@
 
 /**
  * main - prints numbers 1 -100, followed by (\n)
- * 
- * return: 0 (Success), 1 (Fail)
+ *
+ * Return: 0 (Success), 1 (Fail)
  */
 int main(void)
 {
@@ -28,5 +28,6 @@ int main(void)
 			printf("%d ", x);
 		}
 	}
+	putchar('\n');
 	return (0);
 }
