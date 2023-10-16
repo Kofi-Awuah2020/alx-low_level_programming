@@ -5,7 +5,7 @@
  *
  * @n: Function takes a pointer *n as an argument
  */
-void reset-to_98(int *n)
+void reset_to_98(int *n)
 {
 	*n = 98;
 }
