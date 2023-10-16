@@ -6,7 +6,7 @@
  * @a: Pointer value to be swapped
  * @b: Pointer value to be swapped
  *
- * Return: 0 (Success)
+ * Return: Void
  */
 void swap_int(int *a, int *b)
 {
@@ -15,5 +15,4 @@ void swap_int(int *a, int *b)
 	temp = *a;
 	*a = *b;
 	*b = temp;
-	return (0);
 }
