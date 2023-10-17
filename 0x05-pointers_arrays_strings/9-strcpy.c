@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 
 /**
  * _strcpy - Function copies a string.
