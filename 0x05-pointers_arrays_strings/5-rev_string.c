@@ -14,11 +14,11 @@ void rev_string(char *s)
 	int x;
 	char temp;
 
-	len = strlen(str);
+	len = strlen(s);
 	for (x = 0; x < (len / 2); x++)
 	{
-		temp = *(str + x);
-		*(str + x) = *(str + len - 1 - x);
-		*(str + len - 1 - x) = temp;
+		temp = *(s + x);
+		*(s + x) = *(s + len - 1 - x);
+		*(s + len - 1 - x) = temp;
 	}
 }
