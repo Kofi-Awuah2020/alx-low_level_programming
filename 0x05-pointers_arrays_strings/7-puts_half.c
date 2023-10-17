@@ -14,7 +14,7 @@ void puts_half(char *str)
 	int y;
 
 	x = strlen(str);
-	if (x % 3 == 0)
+	if ((x - 1) % 3 == 0)
 	{
 		for (y = (x - 1) / 2; y < x; y++)
 		{
