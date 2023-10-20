@@ -4,36 +4,25 @@
 /**
  * leet - function encodes a string into 1337
  *
- * @s: Sting to be encoded.
+ * @s: String to be encoded.
  *
  * Return: *s
  */
 char *leet(char *s)
 {
-	int len = strlen(s);
+	char letters[] = "aAeEoOtTlL";
+	char replacement[] = "4433007711";
 	int x;
+	int y;
 
-	for (x = 0; x < len; x++)
+	for (x = 0; s[x] != '\0'; x++)
 	{
-		if (s[x] == 'a' || s[x] == 'A')
+		for (y = 0; y < 10; y++)
 		{
-			s[x] = '4';
-		}
-		if (s[x] == 'e' || s[x] == 'E')
-		{
-			s[x] = '3';
-		}
-		if (s[x] == 'o' || s[x] == 'O')
-		{
-			s[x] = '0';
-		}
-		if (s[x] == 't' || s[x] == 'T')
-		{
-			s[x] = '7';
-		}
-		if (s[x] == 'l' || s[x] == 'L')
-		{
-			s[x] = '1';
+			if (s[x] == letters[y])
+			{
+				s[x] = replacement[y];
+			}
 		}
 	}
 	return (s);
