@@ -19,9 +19,9 @@ char *cap_string(char *s)
 	{
 		if (strchr(separators, s[x]) != NULL)
 		{
-			if (s[x + 1] >= 'a' && s[x + 1] <= 'z')
+			if (isalpha(s[x + 1]) && islower(s[x + 1]))
 			{
-				s[x + 1] -= 32;
+				s[x + 1] = toupper(s[x + 1]);
 			}
 		}
 	}
