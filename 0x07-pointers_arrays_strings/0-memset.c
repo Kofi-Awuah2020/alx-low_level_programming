@@ -2,7 +2,6 @@
 
 /**
  * _memset - function fills the first n bytes of the memory area
- * pointed to by s with the constant byte b
  *
  * @s: pointer to the block of memory to fill
  * @b: this is value to be set
