@@ -12,14 +12,14 @@
  */
 char *_strpbrk(char *s, char *accept)
 {
-	if (s == '\0' || accept == '\0')
-	{
-		return (NULL);
-	}
 	int x;
 	int y;
 	int len = strlen(accept);
 
+	if (*s == '\0' || *accept == '\0')
+	{
+		return (NULL);
+	}
 	for (x = 0; s[x] != '\0'; x++)
 	{
 		for (y = 0; y < len; y++)
