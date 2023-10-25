@@ -11,8 +11,8 @@
  */
 void print_diagsums(int *a, int size)
 {
-	int sum1;
-	int sum2;
+	int main_sum;
+	int second_sum;
 	int x;
 
 	sum1 = 0;
@@ -20,11 +20,11 @@ void print_diagsums(int *a, int size)
 
 	for (x = 0; x < size; x++)
 	{
-		sum1 += a[x * size + 1];
+		main_sum = main_sum + a[x * size + x];
 	}
 	for (x = size - 1; x >= 0; x--)
 	{
-		sum2 += a[x * size + (size - 1 - x)];
+		second_sum += a[x * size + (size - x - 1)];
 	}
 	printf("%d, %d", sum1, sum2);
 }
