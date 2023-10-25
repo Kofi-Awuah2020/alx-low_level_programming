@@ -3,7 +3,7 @@
 /**
  * print_chessboard - function prints the 2d array chessboard.
  *
- * @a: row size of board
+ * @a: 2d array
  *
  * Return: Void
  */
