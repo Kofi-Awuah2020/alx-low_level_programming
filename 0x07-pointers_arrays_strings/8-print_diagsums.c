@@ -15,12 +15,12 @@ void print_diagsums(int *a, int size)
 	int second_sum;
 	int x;
 
-	sum1 = 0;
-	sum2 = 0;
+	main_sum = 0;
+	second_sum = 0;
 
 	for (x = 0; x < size; x++)
 	{
-		main_sum = main_sum + a[x * size + x];
+		main_sum +=  a[x * size + x];
 	}
 	for (x = size - 1; x >= 0; x--)
 	{
