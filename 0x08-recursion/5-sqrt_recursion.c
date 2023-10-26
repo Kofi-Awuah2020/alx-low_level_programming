@@ -27,5 +27,5 @@ int appx_root(int root, int n)
  */
 int _sqrt_recursion(int n)
 {
-	return (appx root(1, n));
+	return (appx_root(1, n));
 }
