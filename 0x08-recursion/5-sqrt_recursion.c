@@ -2,22 +2,23 @@
 
 /**
  * appx_root - checks root starting from 1 till root * root = n.
- * @root: variable for caluclating square root
+ * @root: variable for calculating square root
  * @n: number that sqaure root most be calculated from
  *
  * Return: result of calculation
  */
-int appx_root(int root, int n)
+int appx_root(int root, int a)
 {
 	if (root * root > n)
 	{
 		return (-1);
 	}
-	if (root * root == n)
+	if (root * root == a)
 	{
 		return (root);
 	}
-	return (appx_root(root + 1, n));
+	return (appx_root(root + 1, a));
+}
 
 /**
  * _sqrt_recursion - returns natural square root of a number
