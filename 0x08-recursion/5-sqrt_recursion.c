@@ -7,17 +7,17 @@
  *
  * Return: result of calculation
  */
-int appx_root(int root, int a)
+int appx_root(int root, int n)
 {
 	if (root * root > n)
 	{
 		return (-1);
 	}
-	if (root * root == a)
+	if (root * root == n)
 	{
 		return (root);
 	}
-	return (appx_root(root + 1, a));
+	return (appx_root(root + 1, n));
 }
 
 /**
