@@ -15,7 +15,7 @@ int appx_root(int root, int n)
 	}
 	if (root * root == n)
 	{
-		return (n);
+		return (root);
 	}
 	return (appx_root(root + 1, n));
 
