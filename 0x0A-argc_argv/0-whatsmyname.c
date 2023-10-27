@@ -1,14 +1,13 @@
-#include "main.h"
 #include <stdio.h>
 
 /**
- * whatsMyName - function prints its name followed by a new line
+ * main - function prints its name followed by a new line
  * @argc: argument count
  * @argv: argument vector
  *
  * Return: 0 Always
  */
-int whatsMyName(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	(void)argc;
 
