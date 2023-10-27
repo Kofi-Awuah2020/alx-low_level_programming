@@ -11,6 +11,7 @@
 int main(int argc, char *argv[])
 {
 	int x;
+	int y;
 	int sum = 0;
 
 	if (argc == 1)
@@ -22,11 +23,14 @@ int main(int argc, char *argv[])
 		for (x = 1; x < argc; x++)
 		{
 			int value = atoi(argv[x]);
-
-			if (value == 0)
+			
+			for (y = 0; y < argv[x][y] = '\0', y++)
 			{
-				puts("Error");
-				return (1);
+				if (atoi(argv[x][y]) == 0)
+				{
+					puts("Error");
+					return (1);
+				}
 			}
 			sum += value;
 		}
