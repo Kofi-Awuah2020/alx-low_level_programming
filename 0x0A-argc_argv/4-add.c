@@ -24,9 +24,9 @@ int main(int argc, char *argv[])
 		{
 			int value = atoi(argv[x]);
 
-			for (y = 0; y < argv[x][y] = '\0', y++)
+			for (y = 0; argv[x][y] != '\0'; y++)
 			{
-				if (atoi(argv[x][y]) == 0)
+				if (atoi(&argv[x][y]) == 0)
 				{
 					puts("Error");
 					return (1);
