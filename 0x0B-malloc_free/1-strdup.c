@@ -10,13 +10,17 @@
  */
 char *_strdup(char *str)
 {
+	int x;
+	char *s;
+	int size;
+
 	if (str == NULL)
 	{
 		return (NULL);
 	}
-	int x = 0;
-	char *s;
-	int size = strlen(str);
+
+	x = 0;
+	size = strlen(str);
 
 	s = malloc((size + 1) * sizeof(*str));
 	if (s == NULL)
