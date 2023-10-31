@@ -22,10 +22,10 @@ char *argstostr(int ac, char **av)
 	}
 	for (x = 0; x < ac; x++)
 	{
-		size += strlen(av[x])+ 1;
+		size += strlen(av[x]) + 1;
 	}
 
-	str = malloc(sizeof(char) * size);
+	str = malloc(sizeof(char) * size + 1);
 	if (str == NULL)
 	{
 		return (NULL);
