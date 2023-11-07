@@ -1,5 +1,5 @@
 #include "dog.h"
-#include <stdlib.h>
+#include <string.h>
 /**
  * init_dog - function initializes a variable of type struct dog
  *
@@ -12,15 +12,7 @@
  */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	 struct dog *canine = d;
-
-	canine = malloc(sizeof(struct dog));
-	if (canine == NULL)
-	{
-		return;
-	}
-	canine->name = name;
-	canine->age = age;
-	canine->owner;
-	return;
+	strcpy(d->name, name);
+	d->age = age;
+	strcpy(d->owner, owner);
 }
