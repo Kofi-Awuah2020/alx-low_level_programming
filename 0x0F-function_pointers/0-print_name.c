@@ -3,11 +3,14 @@
 /**
  * print_name - function prints a name
  * @name: Name of the person
- * @(*f)(char *): pointer to string
+ * @f: pointer to function
  *
  * Return: Void
  */
 void print_name(char *name, void (*f)(char *))
 {
-	f(name);
+	if (name != NULL && f != NULL)
+	{
+		f(name);
+	}
 }
