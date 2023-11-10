@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 		puts("Error");
 		exit(99);
 	}
-	if ((argv[2][0] == '/' || argv[2][0] == '%') && num2 == 0)
+	if ((argv[2][0] == '/' || argv[2][0] == '%') && argv[3] == 0)
 	{
 		puts("Error");
 		exit(100);
