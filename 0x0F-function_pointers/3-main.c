@@ -15,6 +15,7 @@ int main(int argc, char *argv[])
 	int num1;
 	int num2;
 	int result;
+	char *operator;
 
 	if (argc != 4)
 	{
@@ -34,7 +35,8 @@ int main(int argc, char *argv[])
 
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
-	result = get_op_func(argv[2])(num1, num2);
+	operator = argv[2];
+	result = get_op_func(operator)(num1, num2);
 
 	printf("%d\n", result);
 	return (0);
