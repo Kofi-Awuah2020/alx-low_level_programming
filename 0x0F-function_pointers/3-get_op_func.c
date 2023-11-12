@@ -25,9 +25,9 @@ int(*get_op_func(char *s))(int, int)
 
 	for (i = 0; i < 6; i++)
 	{
-		if (ops[i].operator != NULL && strcmp(s, ops[i].operator) == 0)
+		if (ops[i].op != NULL && strcmp(s, ops[i].op) == 0)
 		{
-			return (ops[i].operation);
+			return (ops[i].f);
 		}
 	}
 	return (NULL);
