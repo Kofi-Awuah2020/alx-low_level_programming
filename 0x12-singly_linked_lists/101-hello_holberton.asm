@@ -1,15 +1,10 @@
-section .data
-	myMessage db 'Hello, Holberton', 0
-
-section .text
-	global print
+	gobal main
 	extern printf
 
-print:
-	sub rsp, 8
+msg:	 db "Hello, Holberton",0
 
-	mov rdi, myMessage
+main:
+	mov rdi, msg
 	call printf
-
-	add rsp, 8
+	mov rax,
 	ret
