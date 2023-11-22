@@ -1,8 +1,8 @@
 	global main
-	extern printfi
+	extern printf
 
-section.data
-msg:	 db "Hello, Holberton",0
+section .data
+msg:	 db "Hello, Holberton", 10, 0
 
 section .text
 main:
@@ -10,11 +10,11 @@ main:
 	call printf
 
 	cmp rax, 0
-	j1 error_exit
+	jne error_exit
 
 	mov rax, 60
 	xor rdi, rdi
-	syscallq
+	syscall
 
 error_exit:
 	mov rax, 60
