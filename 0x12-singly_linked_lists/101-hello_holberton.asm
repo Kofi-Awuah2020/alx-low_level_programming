@@ -1,6 +1,6 @@
 	global main
 	extern printfi
-	
+
 section.data
 msg:	 db "Hello, Holberton",0
 
@@ -11,7 +11,7 @@ main:
 
 	cmp rax, 0
 	j1 error_exit
-	
+
 	mov rax, 60
 	xor rdi, rdi
 	syscallq
