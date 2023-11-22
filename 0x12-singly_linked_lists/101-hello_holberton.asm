@@ -1,23 +1,26 @@
 	global main
 	extern printf
+	extern exit
 
 section .data
 msg:	 db "Hello, Holberton", 10, 0
 
 section .text
 main:
+	push rdi
 	mov rdi, msg
 	call printf
+	pop rdi
 
+	; check return value of printf
 	cmp rax, 0
-	jne error_exit
+	jne error_exit 	; checks if return value is not equal to zero
 
-	mov rax, 60
-	xor rdi, rdi
-	syscall
+	; exit with code 0 if successful
+	mov rdi, 0
+	call exit
 
 error_exit:
-	mov rax, 60
-	xor rdi, rdi
-	inc rdi
-	syscall
+	; handles possible errors during printf call
+	mov rdi, 1
+	call exit
