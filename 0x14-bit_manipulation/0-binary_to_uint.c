@@ -11,6 +11,11 @@ unsigned int binary_to_uint(const char *b)
 	int x;
 	unsigned int num = 0;
 
+	if (b == NULL)
+	{
+		return (0);
+	}
+
 	for (x = 0; b[x] != '\0'; x++)
 	{
 		if (b[x] != '0' && b[x] != '1') /* Check if b[x] is not 0 or 1 */
