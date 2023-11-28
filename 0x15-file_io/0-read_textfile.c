@@ -29,7 +29,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	buffer = malloc(sizeof(char) * letters); /* Allocate Memory per letters */
 	if (buffer == NULL)
 	{
-		close(filename); /* Memory allocation failed */
+		close(fileDescriptor); /* Memory allocation failed */
 		return (0);
 	}
 
