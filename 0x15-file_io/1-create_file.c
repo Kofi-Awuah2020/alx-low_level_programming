@@ -1,6 +1,7 @@
 #include "main.h"
 #include <string.h>
-#define FLAGS (O_WRONLY | O_WRONLY | O_TRUNC)
+
+#define FLAGS (O_WRONLY | O_CREAT | O_TRUNC)
 #define PERMS (S_IRUSR | S_IWUSR)
 
 /**
@@ -31,9 +32,9 @@ int create_file(const char *filename, char *text_content)
 	if (text_content == NULL)
 	{
 		close(fileDescriptor);
-		return(-1);
+		return (-1);
 	}
-	
+
 	len = strlen(text_content);
 	byteWritten = write(fileDescriptor, text_content, strlen(text_content));
 	if ((size_t)byteWritten != len || byteWritten == -1)
