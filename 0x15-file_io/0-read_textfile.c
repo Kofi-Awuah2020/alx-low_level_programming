@@ -10,35 +10,38 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	if (filename == NULL)
-	{
-		return (0);
-	}
-
 	int fileDescriptor;
 	char *buffer = NULL;
-	int x;
-	size_t bytesRead = 0;
-	ssize_t bytesWritten = 0;
+	ssize_t bytesRead = 0; /* Track bytes read by read() */
+	ssize_t bytesWritten = 0; /* Track bytes written by write() */
+
+	if (filename == NULL)
+	{
+		return (0); /* filename is empty */
+	}
 
 	fileDescriptor = open(filename, O_RDONLY);
 	if (fileDescriptor == -1)
 	{
-		return (0);
+		return (0); /* Failed to open file */
 	}
 
-	buffer = malloc(sizeof(char) * letters);
+	buffer = malloc(sizeof(char) * letters); /* Allocate Memory per letters */
 	if (buffer == NULL)
 	{
-		close(filename);
+		close(filename); /* Memory allocation failed */
 		return (0);
 	}
 
 	bytesRead = read(fileDescriptor, buffer, letters);
+	if (fileDescriptor == -1)
+	{
+		return (0); /* Read failed */
+	}
 	bytesWritten = write(STDOUT_FILENO, buffer, bytesWritten);
 	if (bytesWritten != bytesRead || bytesWritten == -1)
 	{
-		return (0);
+		return (0); /* Write failed to print number of bytes */
 	}
 
 	close(fileDescriptor);
