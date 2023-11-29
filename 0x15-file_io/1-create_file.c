@@ -1,7 +1,7 @@
 #include "main.h"
 #include <string.h>
 
-#define FLAGS (O_CREAT | O_TRUNC)
+#define FLAGS (O_CREAT | O_WRONLY | O_TRUNC)
 #define PERMS (S_IRUSR | S_IWUSR)
 
 /**
